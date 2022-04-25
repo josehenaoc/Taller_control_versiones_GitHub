@@ -1,19 +1,12 @@
-Proceso ejercicio3_arreglos
-//----------------------------------------------------------------------------Definir variables--------------------------------------------------------------------------------------------------------------------------------!
-	Definir nombre_completo Como Caracter;
-	Definir num, i, control, arreglo Como Entero;
+//--------------------------------------------------------------------------Definir funciones----------------------------------------------------------------------------------------------------------------------------------!
+SubProceso numero_primo(nombre_completo,num)
+	
+	Definir  i, control, arreglo Como Entero;
 	Definir answer Como Logico;
 	Dimension arreglo(1000);
+	
 	answer<- Verdadero;//Se asume que todos los numeros son primos <----
 	
-//-------------------------------------------------------------------------Ejecucíon del código--------------------------------------------------------------------------------------------------------------------------------!
-	Escribir "Bienvenidos a la app calculadoraNumeroPrimo";
-	Escribir "";
-	Escribir "Escribe tu nombre completo por favor";
-	Leer nombre_completo;
-	Escribir "Escribe un número entre 1 al 1000";
-	Leer num;
-
 	Si num<-1 Entonces //Filtro para descartar numeros negativos y el 1 <----
 		Escribir "No es primo";
 		
@@ -39,6 +32,23 @@ Proceso ejercicio3_arreglos
 		FinSi
 		
 	FinSi
+	
+FinSubProceso
+
+//---------------------------------------------------------------------------Definir variables--------------------------------------------------------------------------------------------------------------------------------!
+    Proceso ejercicio3_arreglos
+    Definir nombre_completo Como Caracter;
+	Definir num Como Entero;
+	
+//-------------------------------------------------------------------------Ejecucíon del código--------------------------------------------------------------------------------------------------------------------------------!
+	Escribir "Bienvenidos a la app calculadoraNumeroPrimo";
+	Escribir "";
+	Escribir "Escribe tu nombre completo por favor";
+	Leer nombre_completo;
+	Escribir "Escribe un número entre 1 al 1000";
+	Leer num;
+	
+	numero_primo(nombre_completo,num);
 	
 FinProceso
 //---------------------------------------------------------------------------------Fin------------------------------------------------------------------------------------------------------------------------------------------!
